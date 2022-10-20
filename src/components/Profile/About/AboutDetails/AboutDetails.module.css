@@ -1,0 +1,36 @@
+.About__Item {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+.About__Item ion-icon {
+  margin-right: 2rem;
+}
+.About__List {
+  margin-top: 2rem;
+}
+.Edit {
+  color: black;
+  width: 100%;
+  margin-top: 2rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.6rem;
+  background-color: #e4e6ebad;
+  padding: 2rem;
+  border-radius: 3px;
+  border: 0;
+  transition: 0.2s;
+}
+.Bio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Edit:hover {
+  background-color: #e4e6eb;
+}

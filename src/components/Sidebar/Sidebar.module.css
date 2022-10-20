@@ -1,0 +1,54 @@
+.Sidebar {
+  flex-basis: 25%;
+  background-color: white;
+  height: 50rem;
+  border-radius: 25px;
+  z-index: 10;
+  position: fixed;
+  width: 25rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+.li a {
+  text-decoration: none;
+  color: #888;
+  font-weight: 600;
+}
+.li a {
+  display: flex;
+
+  align-items: center;
+}
+.li a ion-icon {
+  margin-right: 1.5rem;
+  font-size: 2.5rem;
+}
+.li {
+  margin-top: 2.2rem;
+}
+.li:hover a {
+  color: #0055ff;
+}
+.li:active a {
+  color: #0055ff;
+}
+.active {
+  color: #0055ff;
+}
+.Logout {
+  position: absolute;
+  bottom: 4rem;
+}
+@media only screen and (max-width: 1000px) {
+  .Sidebar {
+    display: none;
+  }
+}
+a {
+  text-decoration: none;
+}

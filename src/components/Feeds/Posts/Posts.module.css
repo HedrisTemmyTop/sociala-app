@@ -1,0 +1,128 @@
+.Posts {
+  margin-top: 4rem;
+  z-index: 100;
+}
+.Sender {
+  display: flex;
+  align-items: center;
+}
+.Img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+.Right {
+  font-size: 1.25rem;
+}
+.Right h4 {
+  margin-top: 0;
+  margin-bottom: 0.5px;
+}
+.Box {
+  border-radius: 10px;
+  margin-top: 2rem;
+  background-color: white;
+  padding: 2rem;
+}
+.Time {
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.Content {
+  color: #515184;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.Reactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Reactions__Left {
+  display: flex;
+  align-items: center;
+}
+.More {
+  text-decoration: none;
+  color: #1e74fd;
+  margin-left: 1rem;
+}
+.Reactions ion-icon,
+.Reactions i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.Likes,
+.Comments {
+  display: flex;
+  margin-right: 0;
+  align-items: center;
+  font-weight: 600;
+}
+.Likes {
+  margin-right: 1.5rem;
+  color: rgb(229, 2, 2);
+}
+.Comments {
+  color: #212529;
+}
+.Reactions__Right {
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+}
+.Reactions__Right i {
+  margin-right: 0.5rem;
+}
+.Loader {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+}
+
+.loader {
+  margin: 60px auto;
+  font-size: 8px;
+  position: relative;
+  background-color: white;
+  text-indent: -9999em;
+  border-top: 5px solid rgba(255, 255, 255, 0.2);
+  border-right: 5px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.2);
+  border-left: 5px solid #1e74fd;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 0.8s infinite linear;
+  animation: load8 0.8s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

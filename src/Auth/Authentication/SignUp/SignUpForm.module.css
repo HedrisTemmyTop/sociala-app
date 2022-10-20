@@ -1,0 +1,123 @@
+.Form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+  padding-bottom: 10rem;
+}
+
+.FormContainer {
+  background-color: #05f;
+  height: 100%;
+  width: 112rem;
+  padding: 10rem;
+  height: 60rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.Input {
+  display: flex;
+  flex-direction: column;
+}
+
+.Input label {
+  font-weight: normal;
+  color: white;
+  margin-bottom: 1rem;
+}
+.Input input {
+  width: 100%;
+  background-color: white;
+  height: 4rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  font-size: 1.6rem;
+  font-style: inherit;
+  border-radius: 5px;
+  border: 1px solid rgb(225, 230, 240);
+}
+.Input input:focus {
+  outline: none;
+  border: 1px solid rgb(225, 230, 240);
+}
+.Button {
+  background-color: white;
+  color: black;
+  padding: 1rem 1.5rem;
+  border: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: capitalize;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.Button:hover {
+  background-color: #05f;
+  color: white;
+}
+.SignUp {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  color: white;
+  margin-top: 0;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.SignUp__Bottom {
+  display: flex;
+  color: white;
+  max-width: 60%;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 820px) {
+  .Form {
+    grid-template-columns: 1fr;
+  }
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #1e74fd;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 081s infinite linear;
+  animation: load8 0.8s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

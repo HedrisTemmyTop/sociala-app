@@ -1,0 +1,67 @@
+.newpost {
+  background-color: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 10px;
+  margin-top: 4rem;
+
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.Header {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: relative;
+}
+.Create {
+  color: #1e74fd;
+  margin-left: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  max-width: 50rem;
+}
+.Form {
+  position: relative;
+}
+.User {
+  width: 3rem;
+  position: absolute;
+  height: 3rem;
+  border-radius: 50%;
+  top: 1rem;
+  left: 1rem;
+}
+.TextArea {
+  max-width: 100%;
+  width: 100%;
+  height: 10rem;
+  outline: none;
+  font-family: inherit;
+  padding-left: 6rem;
+  padding-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: transparent;
+  border: 2px #f1f1f1 solid;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.TextArea:focus {
+  outline: none;
+}
+.Bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.Bottom__Content {
+  display: flex;
+  margin-right: 2rem;
+  align-items: center;
+  cursor: pointer;
+}
+ion-icon {
+  font-size: 2.8rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}

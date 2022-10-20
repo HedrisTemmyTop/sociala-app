@@ -1,0 +1,12 @@
+.Feeds {
+  flex-basis: 40%;
+  margin-left: 10rem;
+  position: relative;
+  flex-shrink: 1;
+  display: block !important;
+}
+@media only screen and (max-width: 1000px) {
+  .Feeds {
+    flex-basis: 100%;
+  }
+}

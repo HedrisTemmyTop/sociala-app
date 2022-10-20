@@ -1,0 +1,17 @@
+.About {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.About ion-icon {
+  font-size: 2.8rem;
+  color: #0055ff;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.Img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}

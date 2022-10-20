@@ -1,0 +1,75 @@
+.Friends {
+  background-color: white;
+  flex-basis: 20%;
+  margin-left: 1rem;
+  margin-right: 5rem;
+  box-sizing: border-box;
+  position: sticky;
+  top: 10rem;
+  padding: 2rem;
+
+  border-radius: 15px;
+}
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Header__Link {
+  text-decoration: none;
+  color: #1e74fd;
+}
+.Header__Name {
+  font-size: 1.4rem;
+}
+.Request {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.Img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+.Username {
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 0.25rem;
+}
+.Cap {
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.Buttons {
+  display: flex;
+  margin-top: 1.6rem;
+}
+.Button {
+  width: 10rem;
+  border: 0;
+  outline: none;
+  font-size: 1.2rem;
+  height: 3.6rem;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 30px;
+}
+.Del {
+  color: #343a40;
+  background-color: #eee;
+}
+.Confirm {
+  color: white;
+  margin-right: 1.5rem;
+
+  background: linear-gradient(135deg, #05f, #09f);
+}
+.Content {
+  margin-top: 2rem;
+}
+.Box {
+  margin-top: 2rem;
+}

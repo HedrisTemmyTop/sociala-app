@@ -1,0 +1,44 @@
+.Messages {
+  flex: 1;
+  background-color: white;
+  z-index: 10;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05) !important;
+  box-sizing: border-box;
+  position: sticky;
+  top: 10rem;
+  margin-left: 2rem;
+  border-radius: 25px;
+}
+.Box {
+  display: flex;
+}
+.Sender__Img {
+  margin-right: 1rem;
+  border: 3px dotted #10d876;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  box-sizing: border-box;
+}
+.Text {
+  color: #6c757d;
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
+}
+.Name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.Content {
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1000px) {
+  .Messages {
+    display: none;
+  }
+}

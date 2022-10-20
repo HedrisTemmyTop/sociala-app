@@ -1,0 +1,160 @@
+.Modal {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  min-width: 70rem;
+  min-height: 50rem;
+  border-radius: 10px;
+  left: 50%;
+  height: 50%;
+  overflow: scroll;
+  width: 45%;
+  transform: translate(-50%, -50%);
+}
+.Bottom {
+  border-top: 1px solid #e4e6ebb2;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  bottom: -2px;
+  padding: 0 2rem;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 6.5rem;
+  z-index: 100;
+  background-color: white;
+}
+
+.Modal::-webkit-scrollbar {
+  width: 0rem;
+  height: 0rem;
+}
+.Head {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  background-color: white;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #e4e6ebb2;
+  padding-bottom: 2rem;
+}
+.Heading {
+  justify-self: end;
+}
+.Close {
+  position: absolute;
+  background-color: #e4e6eb;
+  right: 2rem;
+  width: 4rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 4rem;
+}
+.CloseIcon {
+  font-size: 3rem;
+  transform: translateY(-0.4rem);
+  color: grey;
+}
+.Content {
+  padding: 2rem;
+}
+.Edu {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.Edu p {
+  margin: 0.5px;
+}
+.Education__Head {
+  margin: 0.5rem 0;
+}
+.Education {
+  margin-bottom: 2rem;
+}
+.AddEdu {
+  display: flex;
+  background-color: #1e74fd;
+  color: white;
+  width: 10rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  height: 4rem;
+  border: 0;
+  border-radius: 3px;
+  align-items: center;
+}
+.Add {
+  margin-right: 1rem;
+}
+.Button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.button {
+  padding: 1rem;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 550;
+  font-size: 1.4rem;
+}
+.RightButton {
+  display: flex;
+  align-items: center;
+}
+.RightButton button {
+  margin-left: 2rem;
+}
+
+.Save {
+  background-color: #1e74fd;
+  color: white;
+  padding: 1rem 2.5rem;
+}
+
+.Update {
+  color: #1e74fd;
+  background-color: transparent;
+}
+.Update:hover {
+  background-color: #e4e6eb;
+}
+.Links {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.Links P {
+  padding: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Left {
+  display: flex;
+  align-items: center;
+}
+.Left ion-icon {
+  margin-left: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .Modal {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

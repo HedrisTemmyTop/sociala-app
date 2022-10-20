@@ -1,0 +1,143 @@
+.Profile {
+  flex-basis: 55%;
+  margin-left: 10rem;
+  position: relative;
+  /* background-color: white; */
+  min-height: 100vh;
+  flex-shrink: 1;
+  margin-right: 10re;
+  display: block !important;
+}
+.Response {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.Display {
+  background-color: white;
+}
+@media only screen and (max-width: 1000px) {
+  .Profile {
+    flex-basis: 100%;
+  }
+}
+.Cover {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 25rem;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+}
+.Parent {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-basis: 50%;
+}
+.FirstChild {
+  position: absolute;
+  right: 1rem;
+  /* opacity: 0; */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.File {
+  /* left: 50%;
+  cursor: pointer;
+  top: 60%;
+  border-radius: 50%; */
+  width: 7.8rem;
+  height: 2.8rem;
+  opacity: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  z-index: 10;
+
+  right: 1rem;
+  position: absolute;
+  /* width: 15rem;
+  height: 15rem; */
+  /* visibility: hidden; */
+}
+.Profile__Image {
+  left: 50%;
+  cursor: pointer;
+  top: 60%;
+
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  position: relative;
+  position: absolute;
+}
+.Profile__Image img {
+  border-radius: 50%;
+  border: 4px solid white;
+  width: 15rem;
+  height: 15rem;
+}
+.Profile__Links {
+  padding: 0 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.button {
+  padding: 2rem;
+  justify-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 2.5px solid #888;
+  color: #888;
+  font-weight: 600;
+}
+
+.active {
+  border-bottom: 3px solid #0055ff;
+  color: #0055ff;
+}
+.DP {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 50rem;
+  transform: translate(-50%, -50%);
+}
+.IconCloseDP {
+  position: absolute;
+  top: 2rem;
+  font-size: 5rem;
+  cursor: pointer;
+  right: 4rem;
+}
+.BottomModal {
+  background-color: white;
+  color: black;
+  width: 30rem;
+  padding: 2.5rem 2rem;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+.BottomModal div {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .DP {
+    width: 100%;
+  }
+}
