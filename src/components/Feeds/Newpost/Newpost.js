@@ -4,23 +4,18 @@ import user from "../../../assets/user1.jpg";
 import { db } from "../../../Auth/AuthConfig";
 import { getUser } from "../../../store/reducer/logger";
 import { collection, addDoc } from "firebase/firestore";
+import user1 from "../../../assets/user1.jpg";
+
 const Newpost = (props) => {
   console.log(props);
   const [userDetails, setUser] = useState(props.user);
   const [userToken, setToken] = useState();
-  const [defaultProfileImage, setDefaultProfileImage] = useState();
+  const [defaultProfileImage, setDefaultProfileImage] = useState(user1);
   useEffect(() => {
     const token = localStorage.getItem("token");
     setToken(token);
     if (props.userImage) setDefaultProfileImage(props.userImage);
     setDefaultProfileImage(props.user.user_image);
-
-    // getUser(token)
-    //   .then((user) => {
-    //     setUser(user);
-    //     console.log(user);
-    //   })
-    //   .catch((error) => console.log(error));
   }, []);
 
   const sendPostHandler = () => {

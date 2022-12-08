@@ -39,7 +39,7 @@ const Layout = (props) => {
     const imageListRef = ref(storage, `${props.token}/`);
     listAll(imageListRef)
       .then((response) => {
-        response.items.forEach((image) => {
+        response.items.forEach((image, i) => {
           getDownloadURL(image).then((url) => {
             if (url) setUserImage((prev) => [...prev, url]);
             if (!url)
@@ -68,7 +68,12 @@ const Layout = (props) => {
                 path="/"
                 element={
                   <React.Fragment>
-                    <Feeds userImage={userImage[0]} user={user} /> <Friends />
+                    <Feeds
+                      userImage={userImage[0]}
+                      token={userToken}
+                      user={user}
+                    />{" "}
+                    <Friends />
                   </React.Fragment>
                 }
               ></Route>

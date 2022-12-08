@@ -12,6 +12,7 @@ const Posts = (props) => {
         const response = await fetchPosts();
         console.log(response);
         setLoading(false);
+        console.log(response);
         setState(response);
       } catch (error) {
         console.log(error);
@@ -22,7 +23,12 @@ const Posts = (props) => {
   }, []);
   return (
     <div className={classes.Posts} id="posts">
-      <Post posts={state} userImage={props.userImage} loading={loading} />
+      <Post
+        posts={state}
+        token={props.token}
+        userImage={props.userImage}
+        loading={loading}
+      />
     </div>
   );
 };

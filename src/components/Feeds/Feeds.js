@@ -9,7 +9,7 @@ const feeds = (props) => {
       <div className={classes.Feeds}>
         <Stories />
         <Newpost user={props.user} userImage={props.userImage} />
-        <Posts userImage={props.userImage} />
+        <Posts userImage={props.userImage} token={props.token} />
       </div>
     </React.Fragment>
   );

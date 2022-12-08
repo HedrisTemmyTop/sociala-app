@@ -9,7 +9,11 @@ import Loader from "../../container/loader/loader";
 import { storage, ref, uploadBytes } from "../../Auth/AuthConfig";
 import Response from "../../container/message/message";
 import Backdrop from "../../container/Backdrop/Backdrop";
-
+import { db } from "../../Auth/AuthConfig";
+import { listAll, getDownloadURL } from "firebase/storage";
+import { doc } from "firebase/firestore";
+import { updateDoc } from "firebase/firestore";
+import { async } from "@firebase/util";
 ///////////////////
 const Profile = (props) => {
   console.log(props);
@@ -46,13 +50,13 @@ const Profile = (props) => {
     imageURL.onload = (e) => {};
     imageURL.readAsDataURL(e.target.files[0]);
   };
-  const sendProfileImageHandler = (e) => {
+  const sendProfileImageHandler = async (e) => {
     setLoading(true);
     const [img] = e.target.files;
     console.log(img);
     const storageRef = ref(storage, `${props.token}/${img.name}`);
 
-    uploadBytes(storageRef, img)
+    await uploadBytes(storageRef, img)
       .then((image) => {
         setLoading(false);
         console.log(`profile image is ${image} `);
@@ -62,8 +66,30 @@ const Profile = (props) => {
         setResponse(err.message);
         console.log(err);
       });
+
+    const imageListRef = ref(storage, `${props.token}/`);
+
+    listAll(imageListRef).then((response) => {
+      response.items.forEach((image, i) => {
+        getDownloadURL(image)
+          .then((url) => {
+            const docRef = doc(db, "users", props.token);
+            console.log(url);
+            updateDoc(docRef, { user_image: url })
+              .then((docRef) => {
+                console.log(
+                  docRef,
+                  "A New Document Field has been added to an existing document"
+                );
+              })
+              .catch((error) => {
+                console.log(error);
+              });
+          })
+          .catch((err) => console.log(err));
+      });
+    });
   };
-  const changeImage = () => {};
 
   /////////////////
   let ModalBox = null;
