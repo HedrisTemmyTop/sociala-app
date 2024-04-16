@@ -36,6 +36,7 @@ const Layout = (props) => {
   }, []);
 
   useEffect(() => {
+    console.log(props);
     const imageListRef = ref(storage, `${props.token}/`);
     listAll(imageListRef)
       .then((response) => {

@@ -4,16 +4,32 @@ import { auth, db } from "../../AuthConfig";
 import classes from "./SignUpForm.module.css";
 import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { ref } from "../../AuthConfig";
+import { storage } from "../../AuthConfig";
+import { uploadBytes } from "../../AuthConfig";
 // import { setDoc } from "firebase/firestore";
 //////////////////////////////
-
+const user6 =
+  "https://t4.ftcdn.net/jpg/03/59/58/91/360_F_359589186_JDLl8dIWoBNf1iqEkHxhUeeOulx0wOC5.jpg";
 ////////////////
-
+const setProfileImage = async (img, token) => {
+  const storageRef = ref(storage, `${token}/${img}`);
+  await uploadBytes(storageRef, img)
+    .then((image) => {
+      // setLoading(false);
+      console.log(image, `profile image is ${image} `);
+    })
+    .catch((err) => {
+      // setLoading(false);
+      // setResponse(err.message);
+      console.log(err);
+    });
+};
 //////////
 const SignUp = () => {
   const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [password, setPassword] = useState("123456");
+  const [confirmPassword, setConfirmPassword] = useState("123456");
   const [contactNumber, setContactNumber] = useState("");
   const [email, setEmail] = useState("");
   const [lastname, setLastname] = useState("");
@@ -22,7 +38,7 @@ const SignUp = () => {
     username: username,
     password: password,
     email: email,
-    user_image: `https://scontent.flos5-2.fna.fbcdn.net/v/t1.6435-9/66155887_3073618089322661_4755773452424577024_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeEWKrQp66riDt6-1ZtLLdI_KhunnyJpGvsqG6efImka-7Hu7W8Vqdjgl8LkU88NObb5HR3WdqIK9maRB5tM4zlA&_nc_ohc=y5Ar-WyNr0kAX_FvQE5&tn=3PIo6VroMNWmcr0p&_nc_ht=scontent.flos5-2.fna&oh=00_AT_9xvUBVk9WjoHnZLgt9hhY9XEeN_qiRURX3aAYK7z8xQ&oe=63711221`,
+    user_image: user6,
     lastname: lastname,
     confirm_password: confirmPassword,
     contact_number: contactNumber,
@@ -59,6 +75,8 @@ const SignUp = () => {
           .catch((error) => {
             console.log(error);
           });
+
+        setProfileImage(user6, userCredential.user.uid);
 
         alert(
           `Dear ${state.username} your account created succesfully kindly login`

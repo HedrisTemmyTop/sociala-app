@@ -13,7 +13,7 @@ import { db } from "../../Auth/AuthConfig";
 import { listAll, getDownloadURL } from "firebase/storage";
 import { doc } from "firebase/firestore";
 import { updateDoc } from "firebase/firestore";
-import { async } from "@firebase/util";
+
 ///////////////////
 const Profile = (props) => {
   console.log(props);
